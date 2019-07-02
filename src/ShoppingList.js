@@ -24,12 +24,18 @@ class ShoppingList extends Component {
     );
   }
 
+  addItem = (item) => {
+    this.setState(currentState => ({
+      items: [...currentState.items, item]
+    }))
+  }
+
   render() {
     return (
       <div>
         <h1>Shopping List</h1>
         {this.renderItems()}
-        <ShoppingListForm />
+        <ShoppingListForm addItem={this.addItem}/>
       </div>
     );
   }
