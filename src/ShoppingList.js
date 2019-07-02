@@ -6,8 +6,8 @@ class ShoppingList extends Component {
     super(props);
     this.state = {
       items: [
-        { name: "Milk", qty: "2 gallons" },
-        { name: "Bread", qty: "2 loaves" }
+        { name: "Milk", quantity: "2 gallons" },
+        { name: "Bread", quantity: "2 loaves" }
       ]
     };
   }
@@ -17,7 +17,7 @@ class ShoppingList extends Component {
       <ul>
         {this.state.items.map(item => (
           <li>
-            {item.name}:{item.qty}
+            {item.name}:{item.quantity}
           </li>
         ))}
       </ul>

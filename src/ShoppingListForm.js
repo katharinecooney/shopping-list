@@ -16,9 +16,18 @@ class ShoppingListForm extends Component {
     })
   }
 
+  handleAddItem = (event) => {
+    event.preventDefault();
+    this.props.addItem(this.state);
+    this.setState({
+      name: '',
+      quantity: ''
+    })
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleAddItem}>
         <label htmlFor="name">Name</label>
         <input 
           type="text"
@@ -37,6 +46,7 @@ class ShoppingListForm extends Component {
           name="quantity"
           value={this.state.quantity}
           onChange={this.handleChange}/>
+          <button type="submit">Add</button>
       </form>
     )
   }
