@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ShoppingListForm from "./ShoppingListForm";
-import uuid from "uuid/v4";
 
 class ShoppingList extends Component {
   constructor(props) {
@@ -30,6 +29,7 @@ class ShoppingList extends Component {
       <div>
         <h1>Shopping List</h1>
         {this.renderItems()}
+        <ShoppingListForm />
       </div>
     );
   }
